@@ -1,1 +1,19 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Upload Image of MRI scan</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="mri" accept=".txt .pdf .jpg .png">
+        <input type="submit" value="Upload">
+    </form>
+    {% if prediction_result %}
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction_result }}</p>
+    {% endif %}
+</body>
+</html>
